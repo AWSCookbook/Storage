@@ -1,0 +1,37 @@
+{
+    "Version":"2012-10-17",
+    "Statement":[
+       {
+          "Effect":"Allow",
+          "Action":[
+             "s3:GetObjectVersionForReplication",
+             "s3:GetObjectVersionAcl"
+          ],
+          "Resource":[
+             "arn:aws:s3:::awscookbook302-src-357sky/*"
+          ]
+       },
+       {
+          "Effect":"Allow",
+          "Action":[
+             "s3:ListBucket",
+             "s3:GetReplicationConfiguration"
+          ],
+          "Resource":[
+             "arn:aws:s3:::awscookbook302-src-357sky"
+          ]
+       },
+       {
+          "Effect":"Allow",
+          "Action":[
+             "s3:ReplicateObject",
+             "s3:ReplicateDelete",
+             "s3:ReplicateTags",
+             "s3:GetObjectVersionTagging"
+ 
+          ],
+          "Resource":"arn:aws:s3:::awscookbook302-dst-357sky/*"
+       }
+    ]
+ }
+ 

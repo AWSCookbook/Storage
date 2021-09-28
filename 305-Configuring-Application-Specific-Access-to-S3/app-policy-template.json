@@ -1,0 +1,12 @@
+{
+    "Version":"2012-10-17",
+    "Statement": [
+    {
+        "Effect": "Allow",
+        "Principal": {
+            "AWS": "EC2_INSTANCE_PROFILE"
+        },
+        "Action": [ACTIONS],
+        "Resource": "arn:aws:s3:AWS_REGION:AWS_ACCOUNT_ID:accesspoint/ACCESS_POINT_NAME/object/*"
+    }]
+}
