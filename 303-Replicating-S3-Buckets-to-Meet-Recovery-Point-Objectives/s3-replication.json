@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "Rules": [
         {
             "Status": "Enabled",
@@ -26,3 +27,34 @@
     ],
     "Role": "arn:aws:iam::611652777867:role/AWSCookbook303S3Role"
 }
+=======
+	"Rules": [
+    	{
+        	"Status": "Enabled",
+        	"Filter": {
+            	"Prefix": ""
+        	},
+        	"Destination": {
+            	"Bucket": "arn:aws:s3:::awscookbook303-dst-b0jeyb",
+            	"Metrics": {
+                	"Status": "Enabled",
+                	"EventThreshold": {
+                    	"Minutes": 15
+                	}
+            	},
+            	"ReplicationTime": {
+                	"Status": "Enabled",
+                	"Time": {
+                    	"Minutes": 15
+                	}
+            	}
+        	},
+		    "DeleteMarkerReplication": {
+                "Status": "Disabled"
+            },
+        	"Priority": 1
+    	}
+	],
+	"Role": "arn:aws:iam::664865145641:role/AWSCookbook303S3Role"
+}
+>>>>>>> d0119e3 (Updated READMEs)

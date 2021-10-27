@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "IntelligentTieringConfiguration": {
         "Id": "awscookbook302",
         "Status": "Enabled",
@@ -10,3 +11,14 @@
         ]
     }
 }
+=======
+    "Id": "awscookbook302",
+    "Status": "Enabled",
+    "Tierings": [
+        {
+            "Days": 90,
+            "AccessTier": "ARCHIVE_ACCESS"
+        }
+    ]
+}
+>>>>>>> d0119e3 (Updated READMEs)

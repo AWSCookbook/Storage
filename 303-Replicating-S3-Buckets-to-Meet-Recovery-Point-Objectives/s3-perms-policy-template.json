@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "Version":"2012-10-17",
     "Statement":[
        {
@@ -35,3 +36,39 @@
     ]
  }
  
+=======
+	"Version":"2012-10-17",
+	"Statement":[
+   	{
+      	"Effect":"Allow",
+      	"Action":[
+         	"s3:GetObjectVersionForReplication",
+         	"s3:GetObjectVersionAcl",
+		      "s3:GetObjectVersionTagging"
+      	],
+      	"Resource":[
+         	"arn:aws:s3:::SRCBUCKET/*"
+      	]
+   	},
+   	{
+      	"Effect":"Allow",
+      	"Action":[
+         	"s3:ListBucket",
+         	"s3:GetReplicationConfiguration"
+      	],
+      	"Resource":[
+         	"arn:aws:s3:::SRCBUCKET"
+      	]
+   	},
+   	{
+      	"Effect":"Allow",
+      	"Action":[
+         	"s3:ReplicateObject",
+         	"s3:ReplicateDelete",
+         	"s3:ReplicateTags"
+      	],
+      	"Resource":"arn:aws:s3:::DSTBUCKET/*"
+   	}
+	]
+ }
+>>>>>>> d0119e3 (Updated READMEs)
