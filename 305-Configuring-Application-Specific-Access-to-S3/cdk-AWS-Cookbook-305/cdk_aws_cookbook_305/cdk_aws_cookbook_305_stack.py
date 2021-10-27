@@ -104,11 +104,7 @@ class CdkAwsCookbook305Stack(Stack):
 
         iam_role2 = iam.Role(self, "Instance2SSM", assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"))
 
-<<<<<<< HEAD
-        iam_role2.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("service-role/AmazonEC2RoleforSSM"))
-=======
         iam_role2.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AmazonSSMManagedInstanceCore"))
->>>>>>> d0119e3 (Updated READMEs)
 
         instance2 = ec2.Instance(
             self,

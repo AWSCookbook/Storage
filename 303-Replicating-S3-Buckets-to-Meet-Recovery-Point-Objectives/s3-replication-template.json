@@ -1,33 +1,4 @@
 {
-<<<<<<< HEAD
-    "Rules": [
-        {
-            "Status": "Enabled",
-            "Filter": {
-                "Prefix": ""
-            },
-            "DeleteMarkerReplication": { "Status": "Disabled" },
-            "Destination": {
-                "Bucket": "arn:aws:s3:::DSTBUCKET",
-                "Metrics": {
-                    "Status": "Enabled",
-                    "EventThreshold": {
-                        "Minutes": 15
-                    }
-                },
-                "ReplicationTime": {
-                    "Status": "Enabled",
-                    "Time": {
-                        "Minutes": 15
-                    }
-                }
-            },
-            "Priority": 1
-        }
-    ],
-    "Role": "ROLEARN"
-}
-=======
 	"Rules": [
     	{
         	"Status": "Enabled",
@@ -57,4 +28,3 @@
 	],
 	"Role": "ROLEARN"
 }
->>>>>>> d0119e3 (Updated READMEs)
