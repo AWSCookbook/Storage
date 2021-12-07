@@ -7,9 +7,11 @@ RANDOM_STRING=$(aws secretsmanager get-random-password \
 --password-length 6 --require-each-included-type \
 --output text \
 --query RandomPassword)
+```
 
-Create an S3 bucket 
-aws s3api create-bucket --bucket awscookbook305-$RANDOM_STRING
+### Create an S3 bucket 
+```
+aws s3api create-bucket --bucket awscookbook306-$RANDOM_STRING
 ```
 
 ## Clean up 

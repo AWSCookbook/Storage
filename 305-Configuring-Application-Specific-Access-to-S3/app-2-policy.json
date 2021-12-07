@@ -4,9 +4,9 @@
     {
         "Effect": "Allow",
         "Principal": {
-            "AWS": "arn:aws:iam::664865145641:role/cdk-aws-cookbook-305-Instance2SSM9F9326DF-K3V3PP8TD6W5"
+            "AWS": "arn:aws:iam::611652777867:role/cdk-aws-cookbook-305-Instance2SSM9F9326DF-6BF2OD4V1RYG"
         },
         "Action": ["s3:GetObject"],
-        "Resource": "arn:aws:s3:us-east-1:664865145641:accesspoint/cookbook305-app-2/object/*"
+        "Resource": "arn:aws:s3:us-east-1:611652777867:accesspoint/cookbook305-app-2/object/*"
     }]
 }

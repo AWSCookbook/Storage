@@ -93,6 +93,8 @@ class CdkAwsCookbook305Stack(Stack):
 
         iam_role1.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AmazonSSMManagedInstanceCore"))
 
+        iam_role1.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AmazonS3FullAccess"))
+
         instance1 = ec2.Instance(
             self,
             "Instance1",
@@ -105,6 +107,8 @@ class CdkAwsCookbook305Stack(Stack):
         iam_role2 = iam.Role(self, "Instance2SSM", assumed_by=iam.ServicePrincipal("ec2.amazonaws.com"))
 
         iam_role2.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AmazonSSMManagedInstanceCore"))
+
+        iam_role2.add_managed_policy(iam.ManagedPolicy.from_aws_managed_policy_name("AmazonS3FullAccess"))
 
         instance2 = ec2.Instance(
             self,
