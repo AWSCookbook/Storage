@@ -34,7 +34,7 @@ class CdkAwsCookbook310Stack(Stack):
 
         isolated_subnets = ec2.SubnetConfiguration(
             name="ISOLATED",
-            subnet_type=ec2.SubnetType.ISOLATED,
+            subnet_type=ec2.SubnetType.PRIVATE_ISOLATED,
             cidr_mask=24
         )
 
@@ -49,7 +49,7 @@ class CdkAwsCookbook310Stack(Stack):
         vpc.add_gateway_endpoint(
             's3GateWayEndPoint',
             service=ec2.GatewayVpcEndpointAwsService('s3'),
-            subnets=[ec2.SubnetSelection(subnet_type=ec2.SubnetType.ISOLATED)],
+            subnets=[ec2.SubnetSelection(subnet_type=ec2.SubnetType.PRIVATE_ISOLATED)],
         )
 
         efs_security_group = ec2.SecurityGroup(
@@ -68,7 +68,7 @@ class CdkAwsCookbook310Stack(Stack):
             security_group=efs_security_group,
             vpc_subnets=ec2.SubnetSelection(
                 one_per_az=False,
-                subnet_type=ec2.SubnetType.ISOLATED
+                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED
             )
         )
 
@@ -79,7 +79,7 @@ class CdkAwsCookbook310Stack(Stack):
             private_dns_enabled=True,
             subnets=ec2.SubnetSelection(
                 one_per_az=False,
-                subnet_type=ec2.SubnetType.ISOLATED
+                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED
             ),
         )
 
@@ -89,7 +89,7 @@ class CdkAwsCookbook310Stack(Stack):
             private_dns_enabled=True,
             subnets=ec2.SubnetSelection(
                 one_per_az=False,
-                subnet_type=ec2.SubnetType.ISOLATED
+                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED
             ),
         )
 
@@ -99,7 +99,7 @@ class CdkAwsCookbook310Stack(Stack):
             private_dns_enabled=True,
             subnets=ec2.SubnetSelection(
                 one_per_az=False,
-                subnet_type=ec2.SubnetType.ISOLATED
+                subnet_type=ec2.SubnetType.PRIVATE_ISOLATED
             ),
         )
 
@@ -154,7 +154,7 @@ class CdkAwsCookbook310Stack(Stack):
             value=vpc.vpc_id
         )
 
-        isolated_subnets_list = vpc.select_subnets(subnet_type=ec2.SubnetType.ISOLATED)
+        isolated_subnets_list = vpc.select_subnets(subnet_type=ec2.SubnetType.PRIVATE_ISOLATED)
 
         CfnOutput(
             self,
